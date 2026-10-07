@@ -18,7 +18,7 @@ warning of rush days. ParkSmart automates the whole journey from the gate to the
 4. Book the EV charger so the maximum number of cars get a charge.
 5. Keep searchable parking records and forecast tomorrow's demand.
 
-## Topics used (2–3 per subject)
+## Topics used
 
 | Subject | Topic | Concept | Where it is used | Code |
 |---|---|---|---|---|
@@ -102,17 +102,3 @@ ParkSmart/
 | Binary search | O(log n) | O(1) |
 | Activity selection | O(n log n) for the sort + O(n) scan | O(n) |
 
-## Notes for the viva
-
-- **Why does the DFA need a dead state?** A DFA must have exactly one transition for every symbol in every
-  state. Any symbol that breaks the format goes to `q∅`, which loops forever, so the plate is rejected.
-- **Why is A* optimal here?** Manhattan distance never overestimates the real distance when cars move in
-  four directions (an admissible heuristic), so A* returns the same shortest route as BFS while expanding fewer cells.
-- **Why does greedy work for activity selection?** Taking the booking that finishes first leaves the most
-  time for the rest. Swapping it into any optimal schedule never makes that schedule worse (the exchange argument).
-- **Why sort before binary search?** Binary search discards half the range each step, which only works when
-  the data is ordered.
-- **Pipeline speedup:** with k = 4 stages and n cars, time drops from n·k·tp to (k + n − 1)·tp, and the
-  speedup approaches k as n grows.
-- **Known limitation:** Delhi-style plates with a one-digit district code (e.g. `DL 3C AB 1234`) are rejected.
-  Supporting them would mean adding a branch from q3 (a possible extension).
