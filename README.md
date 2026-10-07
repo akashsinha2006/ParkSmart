@@ -1,7 +1,7 @@
-# ParkSmart — Intelligent Parking Management System
+# ParkSmart
 
 A small web app that solves a real-world problem using topics from four subjects:
-**AI/ML Foundations**, **Design & Analysis of Algorithms**, **Computer Organization & Architecture**
+**AI/ML**, **Design & Analysis of Algorithms**, **Computer Organization & Architecture**
 and **Formal Languages & Automata Theory**.
 
 ## Problem statement
